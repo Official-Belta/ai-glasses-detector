@@ -108,6 +108,9 @@ void main() {
   testWidgets('home', (tester) async {
     await phone(tester);
     await tester.pumpWidget(GlassesDetectorApp(signatures: db));
+    // 동의 상태 확인(비동기) 뒤 홈이 0.6초에 걸쳐 나타난다.
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 900));
     await expectLater(find.byType(MaterialApp), matchesGoldenFile('out/1_home_dark.png'));
   });
 
@@ -116,6 +119,8 @@ void main() {
     tester.platformDispatcher.platformBrightnessTestValue = Brightness.light;
     addTearDown(tester.platformDispatcher.clearPlatformBrightnessTestValue);
     await tester.pumpWidget(GlassesDetectorApp(signatures: db));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 900));
     await expectLater(find.byType(MaterialApp), matchesGoldenFile('out/1_home_light.png'));
   });
 

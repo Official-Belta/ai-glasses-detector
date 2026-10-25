@@ -140,9 +140,10 @@ class AppButton extends StatelessWidget {
           height: 56,
           alignment: Alignment.center,
           decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(8)),
+          // AnimatedDefaultTextStyle 은 바깥 글자 스타일을 덮어쓰므로, 기본 서체를 물려받도록 merge 한다.
           child: AnimatedDefaultTextStyle(
             duration: const Duration(milliseconds: 200),
-            style: T.bodyStrong.copyWith(color: fg),
+            style: DefaultTextStyle.of(context).style.merge(T.bodyStrong.copyWith(color: fg)),
             child: Text(label),
           ),
         ),
@@ -196,7 +197,7 @@ class Segmented<V> extends StatelessWidget {
                     child: Center(
                       child: AnimatedDefaultTextStyle(
                         duration: const Duration(milliseconds: 200),
-                        style: T.aux.copyWith(
+                        style: DefaultTextStyle.of(context).style.merge(T.aux).copyWith(
                           color: i == index ? c.ink : c.ink2,
                           fontWeight: i == index ? FontWeight.w600 : FontWeight.w400,
                         ),
