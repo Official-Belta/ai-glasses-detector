@@ -1,0 +1,48 @@
+AI 안경 탐지기 (AI Glasses Detector)
+Copyright (C) 2026 걸다 주식회사 (GEOLDA Co., Ltd.)
+
+이 프로그램은 자유 소프트웨어입니다. GNU Affero General Public License 3.0(AGPL-3.0)
+또는 그 이후 버전에 따라 재배포하거나 수정할 수 있습니다. 전문은 LICENSE 파일에 있습니다.
+이 프로그램은 어떠한 보증도 없이 배포됩니다.
+
+
+원작
+----
+이 앱은 Yves Jeanrenaud의 Nearby Glasses를 바탕으로 한국 시험 감독용으로 다시 만든 포크입니다.
+
+  Nearby Glasses
+  Copyright (C) 2026 Yves Jeanrenaud
+  https://github.com/yjeanrenaud/yj_nearbyglasses
+  License: GNU AGPL-3.0
+
+원작에서 가져온 것
+- 탐지 방식: BLE 광고 신호의 제조사 ID, 서비스 UUID, 기기 이름으로 스마트 안경을 찾는 방법
+- 탐지 시그니처: Meta 0x01AB, 0x058E / EssilorLuxottica 0x0D53 / Snap 0x03C2 /
+  Jieli 0x05D6 / HeyCyan 서비스 UUID와 기기 이름 / Ray-Ban 기기 이름
+
+다시 만든 것
+- 앱 코드는 원작의 Kotlin, Swift 코드를 옮기지 않고 Flutter로 새로 작성했습니다.
+- 시험 감독 기능(교실 기기 확인, 새 기기 감지, 수신 기록표, 감독 기록)과 화면은 이 포크에서 새로 만들었습니다.
+- 앱 아이콘은 원작의 그림을 쓰지 않고 새로 그렸습니다.
+
+이 앱은 원작과 별개의 앱이며 원작자가 이 앱을 보증하지 않습니다.
+
+
+함께 쓰는 소프트웨어
+--------------------
+앱 안의 "앱 정보 > 오픈소스 라이선스" 화면에서 각 라이선스 전문을 볼 수 있습니다.
+
+- Flutter SDK (BSD-3-Clause) https://github.com/flutter/flutter
+- flutter_reactive_ble (BSD-3-Clause) https://github.com/PhilipsHue/flutter_reactive_ble
+- permission_handler (MIT) https://github.com/baseflow/flutter-permission-handler
+- wakelock_plus (BSD-3-Clause) https://github.com/fluttercommunity/wakelock_plus
+- share_plus, path_provider, device_info_plus (BSD-3-Clause) https://github.com/fluttercommunity/plus_plugins
+- shared_preferences (BSD-3-Clause) https://github.com/flutter/packages
+- Barlow Condensed 글꼴 (SIL Open Font License 1.1) https://github.com/jpt/barlow
+  Copyright 2017 The Barlow Project Authors. 라이선스 전문: app/assets/fonts/Barlow-OFL.txt
+
+
+상표
+----
+Meta, Ray-Ban, Oakley, Snap Spectacles 등은 각 소유자의 상표입니다.
+이 앱은 해당 회사와 제휴하거나 보증받은 앱이 아닙니다. 제품 이름은 탐지 대상을 설명하는 데에만 씁니다.

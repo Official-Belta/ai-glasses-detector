@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "updated": "2026-10-25",
+  "source": "Nearby Glasses (github.com/yjeanrenaud/yj_nearbyglasses) 시그니처 기반 + 자체 조사",
+  "signatures": [
+    {
+      "id": "meta-01ab",
+      "label": "Meta 스마트 안경",
+      "match": { "companyIds": ["0x01AB"] },
+      "note": "Meta Platforms 제조사 ID. 메타 퀘스트 등 다른 메타 기기도 같은 ID를 쓸 수 있음."
+    },
+    {
+      "id": "meta-058e",
+      "label": "Meta 스마트 안경",
+      "match": { "companyIds": ["0x058E"] },
+      "note": "Meta Platforms Technologies 제조사 ID. 메타 퀘스트 등 VR 기기도 같은 ID를 쓸 수 있음."
+    },
+    {
+      "id": "luxottica-0d53",
+      "label": "레이밴·오클리 메타",
+      "match": { "companyIds": ["0x0D53"] },
+      "note": "EssilorLuxottica 제조사 ID."
+    },
+    {
+      "id": "snap-03c2",
+      "label": "Snap Spectacles",
+      "match": { "companyIds": ["0x03C2"] },
+      "note": "Snap Inc. 제조사 ID."
+    },
+    {
+      "id": "jieli-05d6",
+      "label": "저가 AI 안경 (Jieli 칩)",
+      "match": { "companyIds": ["0x05D6"] },
+      "note": "Zhuhai Jieli 칩셋 ID. 같은 칩을 쓰는 저가 이어폰·스피커에서도 나올 수 있어 오탐 가능성이 상대적으로 높음."
+    },
+    {
+      "id": "heycyan-uuid",
+      "label": "HeyCyan 계열 AI 안경",
+      "match": { "serviceUuids": ["7905FFF0-B5CE-4E99-A40F-4B1E122D00D0"] },
+      "note": "HeyCyan SDK 서비스 UUID (Nilox 등 다수 저가 브랜드)."
+    },
+    {
+      "id": "heycyan-name",
+      "label": "HeyCyan 계열 AI 안경",
+      "match": { "nameContains": ["heycyan"] },
+      "note": "기기 이름에 HeyCyan 포함."
+    },
+    {
+      "id": "rayban-name",
+      "label": "레이밴 메타",
+      "match": { "nameContains": ["rayban", "ray-ban", "ray ban"] },
+      "note": "주로 페어링 중에만 이름이 노출됨."
+    }
+  ]
+}

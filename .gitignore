@@ -1,0 +1,15 @@
+# 원작 클론(참고용), 빌드 결과물
+/upstream/
+/dist/
+
+# 서명 키
+*.jks
+*.keystore
+key.properties
+
+# 내부 메모: 공개하지 않음
+/CLAUDE.md
+/docs/research.md
+/docs/legal/
+/docs/demo.mp4
+/claude-열기.bat

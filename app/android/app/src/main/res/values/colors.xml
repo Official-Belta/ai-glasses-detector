@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 앱 배경(theme.dart AppColors.dark.bg)과 같은 색. 켤 때 흰 화면이 번쩍이지 않게. -->
+    <color name="app_bg">#0A0B0D</color>
+    <!-- flutter_launcher_icons 가 쓰는 적응형 아이콘 배경 -->
+    <color name="ic_launcher_background">#D4FF00</color>
+</resources>
