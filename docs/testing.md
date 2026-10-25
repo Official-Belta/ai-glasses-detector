@@ -50,3 +50,9 @@
 
 모의 모드는 `--dart-define=SIMULATE=true`로 빌드할 때만 켜진다(`app/lib/src/scan/simulated_scanner.dart`). 배포 빌드에는 들어가지 않는다.
 에뮬레이터용 리눅스 라이브러리는 sudo 없이 `apt download`로 받아 `~/dev/emu-libs`에 풀어 두었다(`~/dev/env.sh`의 `LD_LIBRARY_PATH`).
+
+## 7. nRF Connect 설정에서 자주 막히는 곳
+
+- 송신과 탐지는 서로 다른 폰에서 해야 한다. 폰은 자기가 보내는 광고를 스스로 받지 못한다.
+- Manufacturer Data는 Advertising data 칸에 넣는다. Scan response data 칸에 넣고 Scannable을 끄면 제조사 데이터가 송신되지 않아 이름 없는 BLE 기기로만 잡힌다.
+- 이름으로 시험하려면 송신 폰의 블루투스 이름을 Ray-Ban Meta로 바꾸고 Advertising data에 Complete Local Name 레코드를 넣는다.
